@@ -1,0 +1,36 @@
+{
+  "name": "notion-cms",
+  "version": "1.0.0",
+  "description": "A simple Notion CMS components library",
+
+  "type": "module",
+
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+
+  "files": [
+    "components",
+    "core",
+    "styles",
+    "index.mjs"
+  ],
+
+  "dependencies": {
+    "@notionhq/client": "^2.3.0",
+    "notion-client": "^7.10.0",
+    "react-notion-x": "^7.10.0"
+  },
+
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "next": ">=15"
+  }
+}
