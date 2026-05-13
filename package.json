@@ -1,36 +1,48 @@
 {
   "name": "notion-cms",
   "version": "1.0.0",
-  "description": "A simple Notion CMS components library",
-
+  "description": "Notion CMS renderer for React and Next.js",
   "type": "module",
-
   "main": "./index.mjs",
   "module": "./index.mjs",
-
   "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "default": "./index.mjs"
-    }
+    ".": "./index.mjs"
   },
-
   "files": [
     "components",
     "core",
     "styles",
-    "index.mjs"
+    "index.mjs",
+    "README.md"
   ],
-
+  "keywords": [
+    "notion",
+    "cms",
+    "react",
+    "nextjs",
+    "notion-api",
+    "react-notion-x"
+  ],
+  "author": "Selvaprasanth",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Selvaprasanth-16/notion-cms.git"
+  },
+  "homepage": "https://github.com/Selvaprasanth-16/notion-cms#readme",
+  "bugs": {
+    "url": "https://github.com/Selvaprasanth-16/notion-cms/issues"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
   "dependencies": {
     "@notionhq/client": "^2.3.0",
     "notion-client": "^7.10.0",
     "react-notion-x": "^7.10.0"
   },
-
-  "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18",
-    "next": ">=15"
+  "scripts": {
+    "test": "echo \"No tests yet\""
   }
 }
