@@ -1,5 +1,5 @@
 {
-  "name": "notion-cms",
+  "name": "@selvaprasanth/notion-cms",
   "version": "1.0.0",
   "description": "Notion CMS renderer for React and Next.js",
   "type": "module",
