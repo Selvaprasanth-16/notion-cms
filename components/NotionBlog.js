@@ -1,4 +1,5 @@
-import { getDatabasePages } from "../core/fetch.js";
+import React from "react";
+import { getDatabasePages } from "./fetch.js";
 import Link from "next/link";
 
 export default async function NotionBlog({

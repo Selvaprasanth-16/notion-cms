@@ -1,25 +1,24 @@
 import { createNotionClient, createNotionXClient } from "./notion.js";
-
-export async function getDatabasePages({ token, databaseId }) {
+export async function getDatabasePages({
+  token,
+  databaseId
+}) {
   const notion = createNotionClient(token);
-
   const response = await notion.databases.query({
-    database_id: databaseId,
+    database_id: databaseId
   });
-
   return response.results;
 }
-
-export async function getPage({ token, pageId }) {
+export async function getPage({
+  token,
+  pageId
+}) {
   const notion = createNotionClient(token);
-
   const response = await notion.blocks.children.list({
-    block_id: pageId,
+    block_id: pageId
   });
-
   return response.results;
 }
-
 export async function getRecordMap(pageId, token) {
   const notionX = createNotionXClient(token);
   return notionX.getPage(pageId);

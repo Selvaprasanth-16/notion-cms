@@ -1,18 +1,21 @@
 {
   "name": "@selvaprasanth/notion-cms",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Notion CMS renderer for React and Next.js",
   "type": "module",
-  "main": "./index.mjs",
-  "module": "./index.mjs",
+  "main": "./index.js",
+  "module": "./index.js",
   "exports": {
-    ".": "./index.mjs"
+    ".": {
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./styles": "./styles/notion.css"
   },
   "files": [
-    "components",
-    "core",
+    "dist",
     "styles",
-    "index.mjs",
+    "index.js",
     "README.md"
   ],
   "keywords": [
@@ -33,16 +36,22 @@
   "bugs": {
     "url": "https://github.com/Selvaprasanth-16/notion-cms/issues"
   },
+  "scripts": {
+    "build": "rm -rf dist && babel components core --out-dir dist --extensions .js,.jsx"
+  },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "next": ">=13"
   },
   "dependencies": {
     "@notionhq/client": "^2.3.0",
     "notion-client": "^7.10.0",
     "react-notion-x": "^7.10.0"
   },
-  "scripts": {
-    "test": "echo \"No tests yet\""
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-react": "^7.27.1"
   }
 }
